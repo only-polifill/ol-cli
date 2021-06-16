@@ -1,6 +1,6 @@
 {
   "name": "@ol-cli/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ol-cli core",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "",
@@ -17,7 +17,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ol-cli/utils": "^1.0.0"
+    "@ol-cli/utils": "^0.0.1"
   },
   "publishConfig": {
     "access": "public"
