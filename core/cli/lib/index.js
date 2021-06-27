@@ -12,6 +12,7 @@ const Pkg = require('../package.json')
 const log = require("@ol-cli/log")
 const constant = require('./constant')
 const init = require('@ol-cli/init')
+const clearConsole = require('@ol-cli/clear-console')
 
 let argv;
 
@@ -25,6 +26,7 @@ async function core() {
         log.verbose('debug', 'debug log')
         checkEnv()
         await checkUpdate()
+        // clearConsole()
         registerCommand()
     }catch (e) {
         console.log(e.message)
@@ -39,10 +41,10 @@ function checkPkgVersion() {
 function checkNodeVersion() {
     //获取当前版本
     const currentVersion = process.version
-    console.log(currentVersion)
+    // console.log(currentVersion)
     //获取最低版本
     const lowestVersion = constant.LOWEST_NODE_VERSION
-    console.log(lowestVersion)
+    // console.log(lowestVersion)
     //进行版本比对
     if (!semver.gte(currentVersion, lowestVersion)) {
         throw new Error(colors.red(`ol-cli需要安装${lowestVersion}版本以上的 node.js`))
@@ -53,7 +55,7 @@ function checkRoot() {
     //使用1.0.0版本root-check 2.0.0版本需要适配import
     const rootCheck = require('root-check')
     rootCheck()
-    console.log(process.getuid())
+    // console.log(process.getuid())
 }
 
 function checkUserHome() {
@@ -81,7 +83,7 @@ function checkArgv() {
 function checkEnv() {
     const dotEnv = require('dotenv')
     const dotEnvPath = path.resolve(userHome, '.env')
-    console.log(dotEnvPath)
+    // console.log(dotEnvPath)
     if (pathExists(dotEnvPath)) {
         dotEnv.config({
             path: dotEnvPath
@@ -126,10 +128,9 @@ function registerCommand() {
         .version(Pkg.version)
         .name(Object.keys(Pkg.bin)[0])
         .option('-d, --debug', '是否开启debug模式', false)
-
     program
-        .command('init [projectName]')
-        .option('-f --force', '是否强制初始化项目')
+        .command('init')
+        // .option('-f --force', '是否强制初始化项目')
         .action(init)
 
     //调试模式

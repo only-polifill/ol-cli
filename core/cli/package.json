@@ -23,6 +23,7 @@
     "@ol-cli/get-npm-info": "file:../../utils/get-npm-info",
     "@ol-cli/log": "file:../../utils/log",
     "@ol-cli/init": "file:../../commands/init",
+    "@ol-cli/clear-console": "file:../../utils/clear-console",
     "colors": "^1.4.0",
     "commander": "^7.2.0",
     "dotenv": "^10.0.0",

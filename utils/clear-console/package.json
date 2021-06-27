@@ -1,7 +1,7 @@
 {
-  "name": "@ol-cli/init",
+  "name": "@ol-cli/clear-cnsole",
   "version": "0.0.1",
-  "description": "ol-cli init",
+  "description": "ol-cli clear-console",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "https://github.com/only-polifill/ol-cli#readme",
   "license": "ISC",
@@ -25,8 +25,5 @@
   },
   "bugs": {
     "url": "https://github.com/only-polifill/ol-cli/issues"
-  },
-  "dependencies": {
-    "inquirer": "^8.1.1"
   }
 }
