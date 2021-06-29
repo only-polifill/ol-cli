@@ -1,18 +1,19 @@
 'use strict';
 
+const fs = require('fs')
 const inquirer = require('inquirer')
 const semver = require('semver')
 
 async function init () {
-    return await getProjectInfo()
+    const projectInfo = {}
+    await getProjectInfo(projectInfo)
+    createFolder(projectInfo)
 }
 
-async function getProjectInfo () {
-    const projectInfo = {}
+async function getProjectInfo (projectInfo) {
     Object.assign(projectInfo, await getProjectName())
     Object.assign(projectInfo, await getProjectVersion())
     console.log(projectInfo)
-    return projectInfo
 }
 
 async function getProjectName () {
@@ -61,6 +62,11 @@ async function getProjectVersion () {
             }
         }
     })
+}
+
+//创建项目文件夹
+function createFolder(projectInfo) {
+    fs.mkdirSync(`./${projectInfo.projectName}`)
 }
 
 module.exports = init
