@@ -71,7 +71,7 @@ async function getTemplate() {
         name: 'template',
         message: '选择下载模版:',
         default: 'vue',
-        choices:['vue', 'vue-admin']
+        choices:['vue', 'vue-admin', 'react']
     })
 }
 

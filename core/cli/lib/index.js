@@ -13,6 +13,7 @@ const log = require("@ol-cli/log")
 const constant = require('./constant')
 const init = require('@ol-cli/init')
 const clearConsole = require('@ol-cli/clear-console')
+const clone = require('@ol-cli/clone')
 
 let argv;
 
@@ -24,7 +25,6 @@ async function core() {
         checkUserHome()
         // checkInputArgv()
         log.verbose('debug', 'debug log')
-        checkEnv()
         await checkUpdate()
         // clearConsole()
         registerCommand()
@@ -79,32 +79,6 @@ function checkArgv() {
     log.level = process.env.LOG_LEVEL
 }
 
-//检查环境变量
-function checkEnv() {
-    const dotEnv = require('dotenv')
-    const dotEnvPath = path.resolve(userHome, '.env')
-    // console.log(dotEnvPath)
-    if (pathExists(dotEnvPath)) {
-        dotEnv.config({
-            path: dotEnvPath
-        })
-    }
-    createDefaultConfig()
-    log.verbose('环境变量', process.env.CLI_HOME_PATH)
-}
-
-//创建默认配置
-function createDefaultConfig() {
-    const cliConfig = {
-        home: userHome
-    }
-    if (process.env.CLI_HOME) {
-        cliConfig['cliHome'] = path.join(userHome, process.env.CLI_HOME)
-    } else {
-        cliConfig['cliHome'] = path.join(userHome, constant.DEFAULT_CLI_HOME)
-    }
-    process.env.CLI_HOME_PATH = cliConfig.cliHome
-}
 
 async function checkUpdate() {
     //获取当前版本号
@@ -128,10 +102,15 @@ function registerCommand() {
         .version(Pkg.version)
         .name(Object.keys(Pkg.bin)[0])
         .option('-d, --debug', '是否开启debug模式', false)
+
     program
         .command('init')
         // .option('-f --force', '是否强制初始化项目')
         .action(init)
+
+    program
+        .command('clone <cloneAddress>')
+        .action(clone)
 
     //调试模式
     program.on('option:debug', function (e) {

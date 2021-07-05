@@ -24,6 +24,7 @@
     "@ol-cli/log": "file:../../utils/log",
     "@ol-cli/init": "file:../../commands/init",
     "@ol-cli/clear-console": "file:../../utils/clear-console",
+    "@ol-cli/clone": "file:../../commands/clone",
     "colors": "^1.4.0",
     "commander": "^7.2.0",
     "dotenv": "^10.0.0",
