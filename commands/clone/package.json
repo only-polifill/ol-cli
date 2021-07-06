@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/only-polifill/ol-cli/issues"
+  },
+  "dependencies": {
+    "@ol-cli/download-git": "file:../../utils/download-git"
   }
 }

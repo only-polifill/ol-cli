@@ -11,8 +11,8 @@ const colors = require('colors')
 const Pkg = require('../package.json')
 const log = require("@ol-cli/log")
 const constant = require('./constant')
+const clear = require('@ol-cli/clear')
 const init = require('@ol-cli/init')
-const clearConsole = require('@ol-cli/clear-console')
 const clone = require('@ol-cli/clone')
 
 let argv;
@@ -26,7 +26,6 @@ async function core() {
         // checkInputArgv()
         log.verbose('debug', 'debug log')
         await checkUpdate()
-        // clearConsole()
         registerCommand()
     }catch (e) {
         console.log(e.message)
@@ -41,10 +40,8 @@ function checkPkgVersion() {
 function checkNodeVersion() {
     //获取当前版本
     const currentVersion = process.version
-    // console.log(currentVersion)
     //获取最低版本
     const lowestVersion = constant.LOWEST_NODE_VERSION
-    // console.log(lowestVersion)
     //进行版本比对
     if (!semver.gte(currentVersion, lowestVersion)) {
         throw new Error(colors.red(`ol-cli需要安装${lowestVersion}版本以上的 node.js`))
@@ -109,8 +106,12 @@ function registerCommand() {
         .action(init)
 
     program
-        .command('clone <cloneAddress>')
+        .command('clone <cloneAddress> [branch]')
         .action(clone)
+
+    program
+        .command('clear')
+        .action(clear)
 
     //调试模式
     program.on('option:debug', function (e) {
