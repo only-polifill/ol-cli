@@ -12,9 +12,9 @@ function download(projectInfo) {
 function cloneCode(projectInfo) {
     console.log(projectInfo)
     let branch = projectInfo.branch ? `#${projectInfo.branch}` : ''
-    const downloadPath = path.join(process.cwd(), `/${projectInfo.projectName}${branch}`)
-    const template = `github:${projectInfo.author}/${projectInfo.projectName}`
-    // console.log(template)
+    const downloadPath = path.join(process.cwd(), `/${projectInfo.projectName}`)
+    const template = `github:${projectInfo.author}/${projectInfo.projectName}${branch}`
+    console.log(template)
     const spinner = ora('代码下载中...').start();
     downloadGit(template, downloadPath, {clone: true}, function (err) {
         spinner.stop()

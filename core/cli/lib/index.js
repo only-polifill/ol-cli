@@ -14,6 +14,7 @@ const constant = require('./constant')
 const clear = require('@ol-cli/clear')
 const init = require('@ol-cli/init')
 const clone = require('@ol-cli/clone')
+const info = require('@ol-cli/info')
 
 let argv;
 
@@ -51,6 +52,7 @@ function checkNodeVersion() {
 function checkRoot() {
     //使用1.0.0版本root-check 2.0.0版本需要适配import
     const rootCheck = require('root-check')
+    //降级root操作权限
     rootCheck()
     // console.log(process.getuid())
 }
@@ -112,6 +114,10 @@ function registerCommand() {
     program
         .command('clear')
         .action(clear)
+
+    program
+        .command('info')
+        .action(info)
 
     //调试模式
     program.on('option:debug', function (e) {
