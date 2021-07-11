@@ -50,7 +50,6 @@ function checkNodeVersion() {
 }
 
 function checkRoot() {
-    //使用1.0.0版本root-check 2.0.0版本需要适配import
     const rootCheck = require('root-check')
     //降级root操作权限
     rootCheck()
