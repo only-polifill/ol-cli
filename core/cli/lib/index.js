@@ -3,7 +3,6 @@
 module.exports = core;
 
 const commander = require('commander')
-const path = require('path')
 const pathExists = require('path-exists').sync
 const userHome = require('user-home')
 const semver = require('semver')
@@ -24,7 +23,6 @@ async function core() {
         checkNodeVersion()
         checkRoot()
         checkUserHome()
-        // checkInputArgv()
         log.verbose('debug', 'debug log')
         await checkUpdate()
         registerCommand()
@@ -53,7 +51,6 @@ function checkRoot() {
     const rootCheck = require('root-check')
     //降级root操作权限
     rootCheck()
-    // console.log(process.getuid())
 }
 
 function checkUserHome() {
@@ -61,22 +58,6 @@ function checkUserHome() {
         throw new Error(colors.red('用户主目录不存在'))
     }
 }
-
-function checkInputArgv() {
-    argv = require('minimist')(process.argv.slice(2))
-    console.log(argv)
-    checkArgv()
-}
-
-function checkArgv() {
-    if (argv.debug) {
-        process.env.LOG_LEVEL = 'verbose'
-    } else {
-        process.env.LOG_LEVEL = 'info'
-    }
-    log.level = process.env.LOG_LEVEL
-}
-
 
 async function checkUpdate() {
     //获取当前版本号
@@ -96,12 +77,6 @@ function registerCommand() {
     const program = new commander.Command()
 
     program
-        .usage('<command> [option]')
-        .version(Pkg.version)
-        .name(Object.keys(Pkg.bin)[0])
-        .option('-d, --debug', '是否开启debug模式', false)
-
-    program
         .command('init')
         // .option('-f --force', '是否强制初始化项目')
         .action(init)
@@ -117,13 +92,6 @@ function registerCommand() {
     program
         .command('info')
         .action(info)
-
-    //调试模式
-    program.on('option:debug', function (e) {
-        process.env.LOG_LEVEL = 'verbose'
-        log.level = process.env.LOG_LEVEL
-        log.verbose("debug开启")
-    })
 
     //未知命令监听
     program.on('command:*', function (obj) {
