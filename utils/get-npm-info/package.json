@@ -1,7 +1,7 @@
 {
-  "name": "get-npm-info",
+  "name": "@ol-cli/get-npm-info",
   "version": "0.2.0",
-  "description": "get npm info",
+  "description": "ol-cli get-npm-info",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "https://github.com/only-polifill/ol-cli#readme",
   "license": "ISC",
@@ -31,5 +31,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "406fde2cd291de10d8318a00289958d52be769eb"
+  "gitHead": "63b1384903750480e8be6f3964ae355f0a90e816"
 }

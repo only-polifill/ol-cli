@@ -32,5 +32,6 @@
   "dependencies": {
     "npmlog": "^4.1.2",
     "path-exists": "^4.0.0"
-  }
+  },
+  "gitHead": "63b1384903750480e8be6f3964ae355f0a90e816"
 }

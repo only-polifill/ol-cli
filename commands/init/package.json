@@ -27,8 +27,9 @@
     "url": "https://github.com/only-polifill/ol-cli/issues"
   },
   "dependencies": {
-    "@ol-cli/download-git": "file:../../utils/download-git",
+    "@ol-cli/download-git": "^0.2.0",
     "inquirer": "^8.1.1",
     "semver": "^7.3.5"
-  }
+  },
+  "gitHead": "63b1384903750480e8be6f3964ae355f0a90e816"
 }

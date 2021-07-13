@@ -29,5 +29,6 @@
   "dependencies": {
     "download-git-repo": "^3.0.2",
     "ora": "^5.4.1"
-  }
+  },
+  "gitHead": "63b1384903750480e8be6f3964ae355f0a90e816"
 }
