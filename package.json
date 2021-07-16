@@ -1,8 +1,11 @@
 {
   "name": "ol-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ol-cli",
   "main": "index.js",
+  "bin": {
+    "ol-cli": "core/cli/bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,5 +14,6 @@
   "license": "ISC",
   "devDependencies": {
     "lerna": "^4.0.0"
-  }
+  },
+  "dependencies": {}
 }

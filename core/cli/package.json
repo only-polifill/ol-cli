@@ -22,7 +22,7 @@
   "dependencies": {
     "@ol-cli/clear": "^0.3.0",
     "@ol-cli/clone": "^0.3.0",
-    "@ol-cli/get-npm-info": "file:../../utils/get-npm-info",
+    "@ol-cli/get-npm-info": "^0.3.0",
     "@ol-cli/info": "^0.3.0",
     "@ol-cli/init": "^0.3.0",
     "@ol-cli/log": "^0.3.0",
@@ -39,5 +39,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "63b1384903750480e8be6f3964ae355f0a90e816"
+  "gitHead": "5958826c7067acb24113b1f943421d60fa2a1bf6"
 }
