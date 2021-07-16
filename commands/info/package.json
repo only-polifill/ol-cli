@@ -1,6 +1,6 @@
 {
   "name": "@ol-cli/info",
-  "version": "0.3.1",
+  "version": "1.0.1",
   "description": "ol-cli info",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "https://github.com/only-polifill/ol-cli#readme",
@@ -29,5 +29,5 @@
   "dependencies": {
     "envinfo": "^7.8.1"
   },
-  "gitHead": "5958826c7067acb24113b1f943421d60fa2a1bf6"
+  "gitHead": "cddcc55080d5df6ab229cc1f423706fcaefff080"
 }
