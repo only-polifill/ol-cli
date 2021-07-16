@@ -1,6 +1,6 @@
 {
   "name": "@ol-cli/log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ol-cli log",
   "keywords": [
     "log"
@@ -33,5 +33,5 @@
     "npmlog": "^4.1.2",
     "path-exists": "^4.0.0"
   },
-  "gitHead": "cddcc55080d5df6ab229cc1f423706fcaefff080"
+  "gitHead": "547994d05aba8a358f97b6c8923b4c680ec5228a"
 }

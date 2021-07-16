@@ -20,12 +20,12 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@ol-cli/clear": "^0.3.1",
-    "@ol-cli/clone": "^0.3.1",
-    "@ol-cli/get-npm-info": "^0.3.1",
-    "@ol-cli/info": "^0.3.1",
-    "@ol-cli/init": "^0.3.1",
-    "@ol-cli/log": "^0.3.1",
+    "@ol-cli/clear": "^1.0.2",
+    "@ol-cli/clone": "^1.0.2",
+    "@ol-cli/get-npm-info": "^1.0.2",
+    "@ol-cli/info": "^1.0.2",
+    "@ol-cli/init": "^1.0.2",
+    "@ol-cli/log": "^1.0.2",
     "colors": "^1.4.0",
     "commander": "^7.2.0",
     "dotenv": "^10.0.0",
@@ -39,5 +39,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "cddcc55080d5df6ab229cc1f423706fcaefff080"
+  "gitHead": "547994d05aba8a358f97b6c8923b4c680ec5228a"
 }

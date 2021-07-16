@@ -1,6 +1,6 @@
 {
   "name": "@ol-cli/download-git",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ol-cli download-git",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "https://github.com/only-polifill/ol-cli#readme",
@@ -30,5 +30,5 @@
     "download-git-repo": "^3.0.2",
     "ora": "^5.4.1"
   },
-  "gitHead": "cddcc55080d5df6ab229cc1f423706fcaefff080"
+  "gitHead": "547994d05aba8a358f97b6c8923b4c680ec5228a"
 }

@@ -1,6 +1,6 @@
 {
   "name": "@ol-cli/clone",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ol-cli clone",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "https://github.com/only-polifill/ol-cli#readme",
@@ -27,7 +27,7 @@
     "url": "https://github.com/only-polifill/ol-cli/issues"
   },
   "dependencies": {
-    "@ol-cli/download-git": "^0.3.1"
+    "@ol-cli/download-git": "^1.0.2"
   },
-  "gitHead": "cddcc55080d5df6ab229cc1f423706fcaefff080"
+  "gitHead": "547994d05aba8a358f97b6c8923b4c680ec5228a"
 }
