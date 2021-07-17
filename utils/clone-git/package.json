@@ -1,7 +1,7 @@
 {
-  "name": "@ol-cli/download-git",
-  "version": "1.0.3",
-  "description": "ol-cli download-git",
+  "name": "@ol-cli/clone-git",
+  "version": "1.0.0",
+  "description": "ol-cli clone-git",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "https://github.com/only-polifill/ol-cli#readme",
   "license": "ISC",
@@ -13,9 +13,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/only-polifill/ol-cli.git"
@@ -30,5 +27,7 @@
     "download-git-repo": "^3.0.2",
     "ora": "^5.4.1"
   },
-  "gitHead": "27bde9d94d9db1935826125c9dc268f35caf0982"
+  "publishConfig": {
+    "access": "public"
+  }
 }

@@ -1,6 +1,6 @@
 {
-  "name": "@ol-cli/core",
-  "version": "1.0.3",
+  "name": "ol-cli",
+  "version": "1.0.4",
   "description": "ol-cli core",
   "author": "only-polifill <740269390@qq.com>",
   "homepage": "",
@@ -21,10 +21,10 @@
   },
   "dependencies": {
     "@ol-cli/clear": "^1.0.3",
-    "@ol-cli/clone": "^1.0.3",
+    "@ol-cli/clone": "^1.0.5",
     "@ol-cli/get-npm-info": "^1.0.3",
     "@ol-cli/info": "^1.0.3",
-    "@ol-cli/init": "^1.0.3",
+    "@ol-cli/init": "^1.0.5",
     "@ol-cli/log": "^1.0.3",
     "colors": "^1.4.0",
     "commander": "^7.2.0",
@@ -39,5 +39,5 @@
   "publishConfig": {
     "access": "public"
   },
-  "gitHead": "27bde9d94d9db1935826125c9dc268f35caf0982"
+  "gitHead": "9e71821f6bb0041401013e85a6d602730506d643"
 }
