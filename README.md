@@ -1,5 +1,7 @@
 ol-cli是一款个人的前端脚手架工具
 
+安装命令：npm install -g ol-cli
+
 可以下载前端框架和克隆github代码
 
 目前支持框架：vue、vue-admin、react等框架精简版(删除多余代码)

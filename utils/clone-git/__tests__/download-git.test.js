@@ -2,6 +2,6 @@
 
 const downloadGit = require('../lib');
 
-describe('@ol-cli/download-git', () => {
+describe('@ol-cli/clone-git', () => {
     it('needs tests');
 });

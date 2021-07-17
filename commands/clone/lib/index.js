@@ -1,6 +1,6 @@
 'use strict';
 
-const downloadGit = require('@ol-cli/download-git')
+const downloadGit = require('@ol-cli/clone-git')
 
 function clone(address, branch=null) {
     const params = address.split("/")

@@ -2,7 +2,7 @@
 
 const inquirer = require('inquirer')
 const semver = require('semver')
-const downloadTemplate = require('@ol-cli/download-git')
+const downloadTemplate = require('@ol-cli/clone-git')
 
 async function init () {
     const projectInfo = {type: 'template'}
